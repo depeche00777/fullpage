@@ -1,1 +1,1 @@
-# fullpage
+# fullpage플러그인을 이용- 배경 이미지, 영상, 유투브
