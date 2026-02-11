@@ -56,6 +56,8 @@ h1 {
 }
 
 .section {
+  position: relative;  /*추가*/
+  overflow: hidden;  /*추가*/
   color: #fff;
   text-align: center;
   background-size: cover;
@@ -77,6 +79,7 @@ h1 {
 .section:nth-child(3) {
   background-image:url(../img/bg3.jpg);
 }
+
 .section:nth-child(4) {
   background-image: linear-gradient(128deg, #40ffdf, #095018);
 }
@@ -103,7 +106,7 @@ h1 {
     background-position: center center;
     background-size: cover;*/
     object-fit: cover; /*cover video background */
-    z-index: -100;
+    /* z-index: -100; */
     /* -webkit-backface-visibility: hidden;
     backface-visibility: hidden; */
 }
@@ -115,9 +118,14 @@ h1 {
     width: 100vw;
     height: 100vh;
     transform: translate(-50%, -50%);
-    z-index: -100;
+    /* z-index: -100; */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+.layer { 
+  -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
 @media (min-aspect-ratio: 16/9) {
