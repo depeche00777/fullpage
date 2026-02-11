@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e03c12;
+}
+
+
+
+body { font-family: sans-serif; }
+
+#header_wrap {
+  position: fixed; top:20px; width: 100%; height: 60px;
+  padding: 0 20px; 
+  z-index:10;
+}
+header { 
+  max-width: 1400px; margin: auto; height: 100%; 
+  display: flex; justify-content: space-between; align-items: center;
+  background: #fff; padding: 0 20px;
+}
+#logo { font-size: 2em; font-weight: bold; }
+nav { }
+ul#menu { 
+  display: flex; gap:30px;
+}
+#menu li {}
+#menu li a {}
+
+.fp-watermark { display: none;}
+
+.container { 
+  height: 50vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+}
+
+#menu li:hover { color:#919191;
+  border-bottom: #919191 5px solid; }
+#menu li.active, 
+#menu li.active:hover {
+  color:#e03c12;
+  border-bottom: #e03c12 5px solid;
+}
+
+
+h1 {
+  font-size: 6em;
+  font-size: calc(1em + 2vw);
+  margin: 0;
+}
+
+.section {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+}
+
+.intro p {
+  width: 50%;
+  margin: 0.5em auto;
+  font-size: calc(0.5em + 1vw);
+}
+
+/* Backgrounds colors for sections */
+.section:nth-child(1) {
+  background-image:url(../img/bg1.jpg);
+}
+.section:nth-child(2) {
+  background-image: linear-gradient(128deg, #ff9a3f, #ff4b40);
+}
+.section:nth-child(3) {
+  background-image:url(../img/bg3.jpg);
+}
+.section:nth-child(4) {
+  background-image: linear-gradient(128deg, #40ffdf, #095018);
+}
+.section:nth-child(5) {
+  background-image: linear-gradient(128deg, #40b9ff, #ff3fff);
+} 
+.slide:nth-child(2) { background-image:url(../img/bg3.jpg);}
+
+/* fullpage 수정 */
+#fp-nav ul li a span, .fp-slidesNav ul li a span { 
+  background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.overlay-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    /*background-size: 100% 100%;
+    background-color: black; in case the video doesn't fit the whole page   
+    background-position: center center;
+    background-size: cover;*/
+    object-fit: cover; /*cover video background */
+    z-index: -100;
+    /* -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; */
+}
+
+.overlay-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+@media (min-aspect-ratio: 16/9) {
+    .overlay-video {
+        height: 56.25vw;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .overlay-video {
+        width: 177.78vh;
+    }
+}
+
+
+@media (max-width:768px){
+  #header_wrap { height: 100px; }
+  header { 
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  ul#menu { gap:16px; }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fullpage</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/basic.css">
+
+  <script src="js/fullpage.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.js"></script>
+  <script src="js/js.js" defer></script>
+</head>
+<body>
+  <div id="header_wrap">
+    <header>
+      <h1 id="logo">Fullpage</h1>
+      <nav>
+        <ul id="menu">
+          <li><a href="#s1">Home</a></li>
+          <li><a href="#s2">WebPages</a></li>
+          <li><a href="#s3">Photos</a></li>
+          <li><a href="#s4">Resume</a></li>
+          <li><a href="#s5">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  
+
+<!-- fullPage.js HTML -->
+  <div id="fullpage">
+    <section class="section">
+      <div class="container intro">
+        <h1>Responsive</h1>
+        <p>This example triggers normal scroll if the width of the page is smaller than 768px.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slide">
+        <h1>section2 - WebPages</h1>
+      <video class="overlay-video" loop muted="true" playsinline data-autoplay>
+        <source src="https://cdn.jsdelivr.net/gh/alvarotrigo/fullpage-assets/videos/forest.mp4" type="video/mp4" />
+        <source src="https://cdn.jsdelivr.net/gh/alvarotrigo/fullpage-assets/videos/forest.webm" type="video/webm" />
+      </video>
+      </div>
+      <div class="slide"><h1>Slide 2.2</h1></div>
+      <div class="slide"><h1>Slide 2.3</h1></div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h1>Section 3 - Photos</h1>
+      </div>      
+    </section>
+    <section class="section">
+      <div class="container">
+        <iframe class="overlay-video" src="https://www.youtube.com/embed/hOgVAYpHPCc?si=B1IpD962t3aqDzoO&autoplay=1&mute=1&controls=0" data-keepplaying="true" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h1>Section 4 - Resume</h1>
+      </div>      
+    </section>
+    <section class="section">
+      <div class="container">
+        <h1>Section 5 - Contact</h1>
+      </div>      
+    </section>
+  </div>
+</body>
+</html>
